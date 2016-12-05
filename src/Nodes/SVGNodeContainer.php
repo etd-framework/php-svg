@@ -76,9 +76,12 @@ abstract class SVGNodeContainer extends SVGNode
      */
     private function resolveChildIndex($nodeOrIndex)
     {
-        if (is_int($nodeOrIndex)) {
+        if (is_int($nodeOrIndex)) 
+		{
             return $nodeOrIndex;
-        } elseif ($nodeOrIndex instanceof SVGNode) {
+        } 
+		elseif ($nodeOrIndex instanceof SVGNode) 
+		{
             return array_search($nodeOrIndex, $this->children, true);
         }
 
@@ -103,12 +106,6 @@ abstract class SVGNodeContainer extends SVGNode
 
     public function rasterize(SVGRasterizer $rasterizer)
     {
-        if ($this->getComputedStyle('display') === 'none') {
-            return;
-        }
-
-        // 'visibility' can be overridden -> only applied in shape nodes.
-
         foreach ($this->children as $child) {
             $child->rasterize($rasterizer);
         }

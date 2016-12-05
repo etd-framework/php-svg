@@ -95,15 +95,6 @@ class SVGCircle extends SVGNode
 
     public function rasterize(SVGRasterizer $rasterizer)
     {
-        if ($this->getComputedStyle('display') === 'none') {
-            return;
-        }
-
-        $visibility = $this->getComputedStyle('visibility');
-        if ($visibility === 'hidden' || $visibility === 'collapse') {
-            return;
-        }
-
         $r = $this->getRadius();
         $rasterizer->render('ellipse', array(
             'cx'    => $this->getCenterX(),

@@ -22,15 +22,6 @@ class SVGPolyline extends SVGPolygonalShape
 
     public function rasterize(SVGRasterizer $rasterizer)
     {
-        if ($this->getComputedStyle('display') === 'none') {
-            return;
-        }
-
-        $visibility = $this->getComputedStyle('visibility');
-        if ($visibility === 'hidden' || $visibility === 'collapse') {
-            return;
-        }
-
         $rasterizer->render('polygon', array(
             'open'      => true,
             'points'    => $this->getPoints(),

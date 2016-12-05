@@ -4,6 +4,7 @@ namespace JangoBrick\SVG\Writing;
 
 use JangoBrick\SVG\Nodes\SVGNode;
 use JangoBrick\SVG\Nodes\SVGNodeContainer;
+use JangoBrick\SVG\Nodes\SVGNodeContent;
 
 /**
  * This class is used for composing ("writing") XML strings from nodes.
@@ -17,6 +18,7 @@ class SVGWriter
     public function __construct()
     {
         $this->outString = '<?xml version="1.0" encoding="utf-8"?>';
+		$this->outString .= '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
     }
 
     /**
@@ -48,15 +50,27 @@ class SVGWriter
         $this->appendAttributes($node->getSerializableAttributes());
         $this->appendStyles($node->getSerializableStyles());
 
-        if (!($node instanceof SVGNodeContainer)) {
+        if (!($node instanceof SVGNodeContainer)) 
+		{
             $this->outString .= ' />';
             return;
         }
-
-        $this->outString .= '>';
-        for ($i = 0, $n = $node->countChildren(); $i < $n; ++$i) {
-            $this->writeNode($node->getChild($i));
+		
+		$this->outString .= '>';
+		
+		if (($node instanceof SVGNodeContent)) 
+		{
+            $this->outString .= $node->getContent();
         }
+		
+        if (($node instanceof SVGNodeContainer)) 
+		{
+			for ($i = 0, $n = $node->countChildren(); $i < $n; ++$i) 
+			{
+				$this->writeNode($node->getChild($i));
+			}
+		}
+		
         $this->outString .= '</'.$node->getName().'>';
     }
 
