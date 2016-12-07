@@ -1,8 +1,8 @@
 <?php
 
-namespace JangoBrick\SVG\Nodes;
+namespace Opnmind\SVG\Nodes;
 
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * Represents a single element inside an SVG image (in other words, an XML tag).
