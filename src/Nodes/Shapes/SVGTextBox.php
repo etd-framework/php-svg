@@ -1,7 +1,8 @@
 <?php
-namespace JangoBrick\SVG\Nodes\Shapes;
-use JangoBrick\SVG\Nodes\SVGNodeContent;
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+namespace Opnmind\SVG\Nodes\Shapes;
+
+use Opnmind\SVG\Nodes\SVGNodeContent;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * Represents the SVG tag 'text'.
