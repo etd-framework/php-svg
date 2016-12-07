@@ -2,9 +2,9 @@
 
 namespace JangoBrick\SVG\Reading;
 
-use JangoBrick\SVG\SVGImage;
-use JangoBrick\SVG\Nodes\SVGNode;
-use JangoBrick\SVG\Nodes\SVGNodeContainer;
+use Opnmind\SVG\SVGImage;
+use Opnmind\SVG\Nodes\SVGNode;
+use Opnmind\SVG\Nodes\SVGNodeContainer;
 
 /**
  * This class is used to read XML strings or files and turn them into instances
@@ -18,15 +18,15 @@ class SVGReader
     * @var string[] $nodeTypes Map of tag names to fully-qualified class names.
     */
     private static $nodeTypes = array(
-        'svg'       => 'JangoBrick\SVG\Nodes\Structures\SVGDocumentFragment',
-        'g'         => 'JangoBrick\SVG\Nodes\Structures\SVGGroup',
-        'rect'      => 'JangoBrick\SVG\Nodes\Shapes\SVGRect',
-        'circle'    => 'JangoBrick\SVG\Nodes\Shapes\SVGCircle',
-        'ellipse'   => 'JangoBrick\SVG\Nodes\Shapes\SVGEllipse',
-        'line'      => 'JangoBrick\SVG\Nodes\Shapes\SVGLine',
-        'polygon'   => 'JangoBrick\SVG\Nodes\Shapes\SVGPolygon',
-        'polyline'  => 'JangoBrick\SVG\Nodes\Shapes\SVGPolyline',
-        'path'      => 'JangoBrick\SVG\Nodes\Shapes\SVGPath',
+        'svg'       => 'Opnmind\SVG\Nodes\Structures\SVGDocumentFragment',
+        'g'         => 'Opnmind\SVG\Nodes\Structures\SVGGroup',
+        'rect'      => 'Opnmind\SVG\Nodes\Shapes\SVGRect',
+        'circle'    => 'Opnmind\SVG\Nodes\Shapes\SVGCircle',
+        'ellipse'   => 'Opnmind\SVG\Nodes\Shapes\SVGEllipse',
+        'line'      => 'Opnmind\SVG\Nodes\Shapes\SVGLine',
+        'polygon'   => 'Opnmind\SVG\Nodes\Shapes\SVGPolygon',
+        'polyline'  => 'Opnmind\SVG\Nodes\Shapes\SVGPolyline',
+        'path'      => 'Opnmind\SVG\Nodes\Shapes\SVGPath',
     );
     /**
      * @var string[] @styleAttributes Attributes to be interpreted as styles.
