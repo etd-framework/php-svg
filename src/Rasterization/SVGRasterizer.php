@@ -1,8 +1,8 @@
 <?php
 
-namespace JangoBrick\SVG\Rasterization;
+namespace Opnmind\SVG\Rasterization;
 
-use JangoBrick\SVG\Nodes\SVGNode;
+use Opnmind\SVG\Nodes\SVGNode;
 
 /**
  * This class is the main entry point for the rasterization process.
