@@ -1,8 +1,8 @@
 <?php
 
-namespace JangoBrick\SVG\Nodes;
+namespace Opnmind\SVG\Nodes;
 
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * Represents an SVG image element that contains child elements.
