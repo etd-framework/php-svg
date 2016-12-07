@@ -1,6 +1,6 @@
 <?php
 
-use JangoBrick\SVG\SVGImage;
+use Opnmind\SVG\SVGImage;
 
 class SVGImageTest extends PHPUnit_Framework_TestCase
 {
@@ -18,7 +18,7 @@ class SVGImageTest extends PHPUnit_Framework_TestCase
         $image = SVGImage::fromString($this->xml);
 
         $doc = $image->getDocument();
-        $docFragClass = '\JangoBrick\SVG\Nodes\Structures\SVGDocumentFragment';
+        $docFragClass = '\Opnmind\SVG\Nodes\Structures\SVGDocumentFragment';
         $this->assertInstanceOf($docFragClass, $doc);
     }
 
