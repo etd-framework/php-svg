@@ -1,10 +1,10 @@
 <?php
 
-namespace JangoBrick\SVG\Rasterization\Renderers;
+namespace Opnmind\SVG\Rasterization\Renderers;
 
-use JangoBrick\SVG\SVG;
-use JangoBrick\SVG\Nodes\SVGNode;
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\SVG;
+use Opnmind\SVG\Nodes\SVGNode;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * This is the base class for all shape renderer instances.
