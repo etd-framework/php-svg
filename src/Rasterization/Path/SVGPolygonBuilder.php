@@ -1,6 +1,6 @@
 <?php
 
-namespace JangoBrick\SVG\Rasterization\Path;
+namespace Opnmind\SVG\Rasterization\Path;
 
 /**
  * This is a helper class for simple polygon construction through sequentially
