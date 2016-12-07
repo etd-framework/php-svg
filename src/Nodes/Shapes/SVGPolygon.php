@@ -1,8 +1,8 @@
 <?php
 
-namespace JangoBrick\SVG\Nodes\Shapes;
+namespace Opnmind\SVG\Nodes\Shapes;
 
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * Represents the SVG tag 'polygon'.
