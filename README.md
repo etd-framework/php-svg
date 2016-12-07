@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/opnmind/php-svg.svg?branch=master)](https://travis-ci.org/opnmind/php-svg)
 [![Code Climate](https://codeclimate.com/github/opnmind/php-svg/badges/gpa.svg)](https://codeclimate.com/github/opnmind/php-svg)
 
+This project is forked from [JangoBrick/php-svg](https://github.com/JangoBrick/php-svg) an will be randomly 
+extended with feature I need for my work.
+
 This is a vector graphics library for PHP, which surely is a broad
 specification. That is due to the fact that the goal of this project is to
 offer features in three different, big areas:
@@ -42,7 +45,7 @@ In case you decide to contribute, please honor these things:
 This package is available through Composer/Packagist:
 
 ```
-$ composer require jangobrick/php-svg
+$ composer require opnmind/php-svg
 ```
 
 ### Manual
