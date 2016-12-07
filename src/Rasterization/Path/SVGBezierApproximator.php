@@ -1,6 +1,6 @@
 <?php
 
-namespace JangoBrick\SVG\Rasterization\Path;
+namespace Opnmind\SVG\Rasterization\Path;
 
 /**
  * This class can approximate quadratic and cubic Bézier curves by calculating
