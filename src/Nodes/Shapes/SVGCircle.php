@@ -1,9 +1,9 @@
 <?php
 
-namespace JangoBrick\SVG\Nodes\Shapes;
+namespace Opnmind\SVG\Nodes\Shapes;
 
-use JangoBrick\SVG\Nodes\SVGNode;
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\Nodes\SVGNode;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
 
 /**
  * Represents the SVG tag 'circle'.
