@@ -1,7 +1,7 @@
 # php-svg
 
-[![Build Status](https://travis-ci.org/JangoBrick/php-svg.svg?branch=master)](https://travis-ci.org/JangoBrick/php-svg)
-[![Code Climate](https://codeclimate.com/github/JangoBrick/php-svg/badges/gpa.svg)](https://codeclimate.com/github/JangoBrick/php-svg)
+[![Build Status](https://travis-ci.org/opnmind/php-svg.svg?branch=master)](https://travis-ci.org/opnmind/php-svg)
+[![Code Climate](https://codeclimate.com/github/opnmind/php-svg/badges/gpa.svg)](https://codeclimate.com/github/opnmind/php-svg)
 
 This is a vector graphics library for PHP, which surely is a broad
 specification. That is due to the fact that the goal of this project is to
@@ -48,7 +48,7 @@ $ composer require jangobrick/php-svg
 ### Manual
 
 [Download](https://github.com/JangoBrick/php-svg/zipball/master) this repo,
-or the [latest release](https://github.com/JangoBrick/php-svg/releases),
+or the [latest release](https://github.com/opnmind/php-svg/releases),
 and put it somewhere in your project. Then do:
 
 ```php
@@ -75,8 +75,8 @@ header and echoes it:
 ```php
 <?php
 
-use JangoBrick\SVG\SVGImage;
-use JangoBrick\SVG\Nodes\Shapes\SVGRect;
+use Opnmind\SVG\SVGImage;
+use Opnmind\SVG\Nodes\Shapes\SVGRect;
 
 // image with 100x100 viewport
 $image = new SVGImage(100, 100);
@@ -100,8 +100,8 @@ on it. Example:
 ```php
 <?php
 
-use JangoBrick\SVG\SVGImage;
-use JangoBrick\SVG\Nodes\Shapes\SVGCircle;
+use Opnmind\SVG\SVGImage;
+use Opnmind\SVG\Nodes\Shapes\SVGCircle;
 
 $image = new SVGImage(100, 100);
 $doc = $image->getDocument();
@@ -129,7 +129,7 @@ from a string, moves the contained rectangle and echoes the new SVG:
 ```php
 <?php
 
-use JangoBrick\SVG\SVGImage;
+use Opnmind\SVG\SVGImage;
 
 $svg  = '<svg width="100" height="100">';
 $svg .= '<rect width="50" height="50" fill="#00F" />';
