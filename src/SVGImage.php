@@ -1,11 +1,11 @@
 <?php
 
-namespace JangoBrick\SVG;
+namespace Opnmind\SVG;
 
-use JangoBrick\SVG\Nodes\Structures\SVGDocumentFragment;
-use JangoBrick\SVG\Rasterization\SVGRasterizer;
-use JangoBrick\SVG\Reading\SVGReader;
-use JangoBrick\SVG\Writing\SVGWriter;
+use Opnmind\SVG\Nodes\Structures\SVGDocumentFragment;
+use Opnmind\SVG\Rasterization\SVGRasterizer;
+use Opnmind\SVG\Reading\SVGReader;
+use Opnmind\SVG\Writing\SVGWriter;
 
 /**
  * This is the main class for any SVG image, as it hosts the document root and
