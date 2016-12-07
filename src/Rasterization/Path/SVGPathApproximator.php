@@ -1,6 +1,6 @@
 <?php
 
-namespace JangoBrick\SVG\Rasterization\Path;
+namespace Opnmind\SVG\Rasterization\Path;
 
 /**
  * This class can trace a path by converting its commands into a series of
