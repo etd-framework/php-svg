@@ -16,15 +16,19 @@ class SVGRect extends SVGNode
     /**
      * @param string|null $x      The x coordinate of the upper left corner.
      * @param string|null $y      The y coordinate of the upper left corner.
+     * @param string|null $x      The rx and the ry attributes rounds the corners of the rectangle
+     * @param string|null $y      The rx and the ry attributes rounds the corners of the rectangle
      * @param string|null $width  The width.
      * @param string|null $height The height.
      */
-    public function __construct($x = null, $y = null, $width = null, $height = null)
+    public function __construct($x = null, $y = null, $rx = null, $ry = null, $width = null, $height = null)
     {
         parent::__construct();
 
         $this->setAttributeOptional('x', $x);
         $this->setAttributeOptional('y', $y);
+        $this->setAttributeOptional('rx', $rx);
+        $this->setAttributeOptional('ry', $ry);
         $this->setAttributeOptional('width', $width);
         $this->setAttributeOptional('height', $height);
     }
@@ -52,6 +56,26 @@ class SVGRect extends SVGNode
     }
 
     /**
+     * @return string The x coordinate of the upper left corner.
+     */
+    public function getRX()
+    {
+        return $this->getAttribute('rx');
+    }
+
+    /**
+     * Sets the x coordinate of the upper left corner.
+     *
+     * @param string $x The new coordinate.
+     *
+     * @return $this This node instance, for call chaining.
+     */
+    public function setRX($rx)
+    {
+        return $this->setAttribute('rx', $rx);
+    }
+
+    /**
      * @return string The y coordinate of the upper left corner.
      */
     public function getY()
@@ -71,7 +95,25 @@ class SVGRect extends SVGNode
         return $this->setAttribute('y', $y);
     }
 
+    /**
+     * @return string The y coordinate of the upper left corner.
+     */
+    public function getRY()
+    {
+        return $this->getAttribute('ry');
+    }
 
+    /**
+     * Sets the y coordinate of the upper left corner.
+     *
+     * @param string $y The new coordinate.
+     *
+     * @return $this This node instance, for call chaining.
+     */
+    public function setRY($y)
+    {
+        return $this->setAttribute('ry', $ry);
+    }
 
     /**
      * @return string The width.
@@ -116,6 +158,8 @@ class SVGRect extends SVGNode
         $rasterizer->render('rect', array(
             'x'         => $this->getX(),
             'y'         => $this->getY(),
+            'rx'         => $this->getRX(),
+            'ry'         => $this->getRY(),
             'width'     => $this->getWidth(),
             'height'    => $this->getHeight(),
         ), $this);
